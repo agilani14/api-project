@@ -3,8 +3,10 @@ import chalk from "chalk";
 
 mongoose.set("returnOriginal", false);
 
+let connectionString = process.env.DB_URL || "mongodb://127.0.0.1:27017/api-project"
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/api-project")
+  .connect(connectionString)
   .catch((err) => {
     console.log(`Error connection to MongoDB: ${err.message}`)
   });
