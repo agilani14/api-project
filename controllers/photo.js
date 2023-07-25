@@ -1,6 +1,6 @@
 import Photo from "../models/Photo.js";
 
-export const getPhoto = async (req, res) => {
+export const getPhotos = async (req, res) => {
   try {
     let photos = await Photo.find();
     res.json(photos);
