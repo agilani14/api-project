@@ -21,3 +21,5 @@ db.on("connected", () => {
     console.log(`Express server running in development on port: ${PORT}`)
   });
 });
+
+export default app
